@@ -1,0 +1,265 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #090b0c;
+  --color-panel: #111516;
+  --color-bone: #f2efe8;
+  --color-mute: #969b98;
+  --color-amber: #e67550;
+
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Inter Tight", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+html {
+  background: #090b0c;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-ink text-bone font-sans antialiased overflow-x-hidden;
+}
+
+::selection {
+  background: #e67550;
+  color: #090b0c;
+}
+
+.site-nav {
+  color: #f2efe8;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 50%;
+  font-family: "Instrument Serif", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.brand-name {
+  color: rgb(255 255 255 / 82%);
+}
+
+.nav-links {
+  border: 1px solid rgb(255 255 255 / 16%);
+  background: rgb(9 11 12 / 42%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.nav-link {
+  padding: 0.65rem 0.8rem;
+  color: rgb(255 255 255 / 72%);
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  border-radius: 999px;
+  background: rgb(255 255 255 / 10%);
+  color: #fff;
+}
+
+.hero-backdrop {
+  background: #101313;
+}
+
+.hero-canvas {
+  display: block;
+  object-fit: cover;
+}
+
+.hero-vignette {
+  background:
+    linear-gradient(90deg, rgb(7 10 10 / 72%) 0%, rgb(7 10 10 / 36%) 37%, transparent 72%),
+    linear-gradient(0deg, rgb(7 10 10 / 78%) 0%, rgb(7 10 10 / 8%) 58%, rgb(7 10 10 / 35%) 100%);
+}
+
+.hero-title {
+  max-width: 11ch;
+  color: #f2efe8;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.hero-title em {
+  color: #e67550;
+  font-weight: 400;
+}
+
+.hero-live-dot {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-right: 0.6rem;
+  border-radius: 50%;
+  background: #e67550;
+  box-shadow: 0 0 12px rgb(230 117 80 / 70%);
+}
+
+.hero-scroll-line {
+  display: inline-block;
+  width: 2.2rem;
+  height: 1px;
+  background: #e67550;
+}
+
+.hero-index {
+  letter-spacing: 0.16em;
+}
+
+.label {
+  @apply font-mono text-[11px] uppercase tracking-[.2em] text-mute;
+}
+
+#skills,
+#journey,
+#contact {
+  position: relative;
+  isolation: isolate;
+}
+
+#skills::before,
+#journey::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 6vw;
+  left: 6vw;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 13%), transparent);
+  content: "";
+}
+
+#skills .skills-row {
+  row-gap: 0.2rem;
+}
+
+.sk {
+  transition: color 300ms ease, opacity 300ms ease, transform 300ms ease;
+}
+
+.skills-row:hover .sk {
+  opacity: 0.28;
+}
+
+.skills-row .sk:hover,
+.skills-row .sk:focus-visible {
+  opacity: 1;
+  color: #e67550;
+  transform: translateX(8px);
+  outline: none;
+}
+
+#projects {
+  border-top: 1px solid rgb(255 255 255 / 7%);
+  border-bottom: 1px solid rgb(255 255 255 / 7%);
+}
+
+#projects .p-card > div:first-child {
+  border-radius: 0.65rem;
+  box-shadow: 0 30px 90px -38px rgb(0 0 0 / 85%);
+}
+
+#projects .p-title {
+  letter-spacing: -0.035em;
+}
+
+#projects .p-card li span {
+  flex: none;
+}
+
+#journey .j-item {
+  border-bottom: 1px solid rgb(255 255 255 / 7%);
+}
+
+#contact {
+  background:
+    radial-gradient(ellipse at 76% 52%, rgb(230 117 80 / 9%), transparent 42%),
+    #090b0c;
+}
+
+#contact footer {
+  border-color: rgb(255 255 255 / 14%);
+}
+
+@media (max-width: 767px) {
+  .brand-name {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 0;
+    padding: 0.2rem;
+  }
+
+  .nav-link {
+    padding: 0.58rem 0.48rem;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-vignette {
+    background:
+      linear-gradient(0deg, rgb(7 10 10 / 82%) 0%, rgb(7 10 10 / 35%) 48%, rgb(7 10 10 / 25%) 100%),
+      linear-gradient(90deg, rgb(7 10 10 / 20%), transparent 70%);
+  }
+
+  .hero-title {
+    max-width: 9ch;
+  }
+
+  #skills,
+  #journey {
+    padding-top: 14vh;
+    padding-bottom: 14vh;
+  }
+}
+
+@media (max-height: 620px) {
+  .hero-topline,
+  .hero-scroll-hint,
+  .hero-index {
+    display: none;
+  }
+
+  .hero-copy {
+    bottom: 6vh;
+  }
+
+  .hero-copy .hero-title {
+    font-size: clamp(2.75rem, 9vw, 4.5rem);
+  }
+
+  .hero-copy > div {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

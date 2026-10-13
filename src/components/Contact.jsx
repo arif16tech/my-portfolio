@@ -29,8 +29,8 @@ export default function Contact() {
         </div>
 
         {/* Right: social link cards */}
-        <div data-rv className="flex flex-col gap-4 md:pt-3 md:min-w-[220px]">
-          <p className="label !text-white/50 mb-2">Find me on</p>
+        <div data-rv className="flex flex-col gap-4 md:pt-3 md:min-w-55">
+          <p className="label text-white/50! mb-2">Find me on</p>
 
           <a
             href={links.github}
@@ -38,7 +38,7 @@ export default function Contact() {
             rel="noreferrer"
             className="group flex items-center gap-4 rounded-2xl border border-white/10 px-5 py-4 text-white/70 transition-all hover:border-amber/40 hover:bg-amber/5 hover:text-amber"
           >
-            <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/15 transition-colors group-hover:border-amber/50">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 transition-colors group-hover:border-amber/50">
               <FaGithub aria-hidden="true" className="h-4 w-4" />
             </span>
             <div className="flex flex-col">
@@ -54,7 +54,7 @@ export default function Contact() {
             rel="noreferrer"
             className="group flex items-center gap-4 rounded-2xl border border-white/10 px-5 py-4 text-white/70 transition-all hover:border-amber/40 hover:bg-amber/5 hover:text-amber"
           >
-            <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/15 transition-colors group-hover:border-amber/50">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 transition-colors group-hover:border-amber/50">
               <FaLinkedinIn aria-hidden="true" className="h-4 w-4" />
             </span>
             <div className="flex flex-col">
@@ -68,7 +68,7 @@ export default function Contact() {
             href={`mailto:${links.email}`}
             className="group flex items-center gap-4 rounded-2xl border border-white/10 px-5 py-4 text-white/70 transition-all hover:border-amber/40 hover:bg-amber/5 hover:text-amber"
           >
-            <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/15 transition-colors group-hover:border-amber/50">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 transition-colors group-hover:border-amber/50">
               <MdOutlineMail aria-hidden="true" className="h-4 w-4" />
             </span>
             <div className="flex flex-col min-w-0">

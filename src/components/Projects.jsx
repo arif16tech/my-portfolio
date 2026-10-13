@@ -30,7 +30,7 @@ function ProjectCard({ p, index }) {
   return (
     <article ref={cardRef} className="p-card flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0f0f13] transition-colors duration-300 hover:border-white/20">
       {/* Thumbnail */}
-      <div className="relative aspect-[16/9] overflow-hidden">
+      <div className="relative aspect-video overflow-hidden">
         <Art p={p} />
       </div>
 

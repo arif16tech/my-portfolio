@@ -21,8 +21,8 @@ export default function Journey() {
         <div className="line absolute left-0 top-0 h-full w-px origin-top bg-amber md:left-[18vw]" />
         {journey.map((j) => (
           <div key={j.n} className="j-item relative overflow-hidden py-14 pl-8 md:py-24 md:pl-[4vw]">
-            <span className="j-num pointer-events-none absolute -top-2 right-0 select-none font-display text-[30vw] italic leading-none text-bone/5 md:text-[16vw]">{j.n}</span>
-            <i className="absolute -left-1 top-[4.4rem] h-2 w-2 rounded-full bg-amber md:left-[calc(-4vw-4px)] md:top-28" />
+            <span className="j-num pointer-events-none absolute -top-2 right-0 select-none font-display text-[30vw] italic leading-none text-bone/[0.05] md:text-[16vw]">{j.n}</span>
+            <i className="absolute -left-[4px] top-[4.4rem] h-2 w-2 rounded-full bg-amber md:left-[calc(-4vw-4px)] md:top-[7rem]" />
             <p className="j-in label">Chapter {j.n}</p>
             <h3 className="j-in mt-3 font-display text-[6.5vw] leading-none md:text-[3vw]">{j.t}</h3>
             <p className="j-in mt-4 max-w-lg text-mute">{j.d}</p>
